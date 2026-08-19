@@ -28,6 +28,8 @@
 
 ## Установка
 
+## Установка
+
 ### Windows
 
 1. Скачайте **TGAgent-win.exe** (справа на этой странице, раздел Files, или в Releases).
@@ -39,16 +41,22 @@
 
 ### Linux / VPS (Ubuntu)
 
-1. Скачайте **TGAgent-linux** и загрузите на сервер:
+1. Скачайте **TGAgent-linux.tar.gz** и загрузите на сервер:
    ```bash
-   scp TGAgent-linux root@ваш-сервер:/opt/tgagent/
+   scp TGAgent-linux.tar.gz root@ваш-сервер:/opt/
    ```
 2. На сервере:
    ```bash
-   cd /opt/tgagent
-   chmod +x TGAgent-linux
-   ./TGAgent-linux
+   cd /opt
+   tar xzf TGAgent-linux.tar.gz
+   ./TGAgent/TGAgent
    ```
+
+> Linux-версия — это папка с программой (в архиве), а не один файл:
+> она ничего не распаковывает во временные каталоги, поэтому
+> фоновый режим стабилен на любых VPS. Переносите всегда архив
+> целиком — один файл `TGAgent` без своей папки не запустится.
+
 
 ---
 
